@@ -1,0 +1,32 @@
+{
+  "name": "gx-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "module": "index.js",
+  "typings": "index.d.ts",
+  "repository": {
+    "url": "https://github.com/GrowthX-Club/gx-editor"
+  },
+  "scripts": {
+    "build": "tsc && node scripts/build.mjs",
+    "dev": "babel lib --out-dir dist --copy-files --extensions '.ts' --extensions '.tsx' --watch"
+  },
+  "author": "Pranav Bakre",
+  "license": "ISC",
+  "workspaces": [
+    "lib",
+    "example"
+  ],
+  "devDependencies": {
+    "@types/node": "^18.15.0",
+    "esbuild": "^0.21.3",
+    "esbuild-node-externals": "^1.13.1",
+    "esbuild-plugin-file-path-extensions": "^2.1.0",
+    "glob": "^10.3.10",
+    "prettier": "^3.0.3"
+  },
+  "peerDependencies": {
+    "express": "^4.19.2"
+  }
+}
